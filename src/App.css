@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Germania+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+}
+header{
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: radial-gradient(circle, #515151, #404040, #303030, #212121, #121212);
+}
+.Yugioh_effect{
+   animation: moverUpDown 1.5s ease-in-out infinite alternate;
+  position: relative;
+}
+@keyframes moverUpDown {
+    0% {
+        transform: translateY(0); 
+    }
+    100% {
+        transform: translateY(-50px);
+    }
+}
+.Btn_cards{
+  width: 150px;
+  height: 45px;
+  margin-top: 2.50rem;
+  font-size: 16px;
+  font-family: "Oswald", sans-serif;
+  font-weight: 500;
+  text-decoration: none;
+  background-image: linear-gradient(to right top, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);
+  opacity: 85%;
+  border-radius: 50px;
+  border: none;
+}
+.Btn_cards:hover{
+  opacity: 100%;
+  transform: scale(1.05);
+}
+.Btn_cards a{
+  text-decoration: none;
+  color: #ffff;
+  letter-spacing: 0.40rem;
+  text-transform: uppercase;
+}
+main{
+  padding-top: 1.50rem;
+  /* background-image: linear-gradient(to bottom, #f6f6f6, #f2f4f8, #ebf2fa, #e1f1fa, #d7f1f8); */
+  background-image: linear-gradient(to bottom, #74abff, #5b92ed, #4379da, #2a61c7, #0449b3);
+  background-image: linear-gradient(to bottom, #2b0053, #1b1352, #111d4c, #132344, #1c2739);
+}
+.Mycards{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2.50rem;
+  margin-top: 1rem;
+}
+ .cards{
+  background: rgba(255, 255, 255, 0.2);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(5px);
+-webkit-backdrop-filter: blur(5px);
+/* border: 1px solid rgba(255, 255, 255, 0.3); */
+  border-radius: 5px;
+  min-width: 350px;
+  min-height: 450px;
+}
+.card-image{
+text-align: center;
+margin-top: 1rem;
+}
+.Name_level{
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  line-height: 2rem;
+  text-transform: uppercase;
+  margin-top: 0.75rem;
+}
+
