@@ -48,12 +48,7 @@ header{
   letter-spacing: 0.40rem;
   text-transform: uppercase;
 }
-main{
-  padding-top: 1.50rem;
-  /* background-image: linear-gradient(to bottom, #f6f6f6, #f2f4f8, #ebf2fa, #e1f1fa, #d7f1f8); */
-  background-image: linear-gradient(to bottom, #74abff, #5b92ed, #4379da, #2a61c7, #0449b3);
-  background-image: linear-gradient(to bottom, #2b0053, #1b1352, #111d4c, #132344, #1c2739);
-}
+
 .Mycards{
   display: flex;
   justify-content: center;
@@ -61,28 +56,56 @@ main{
   gap: 2.50rem;
   margin-top: 1rem;
 }
- .cards{
+.cards{
   background: rgba(255, 255, 255, 0.2);
-border-radius: 16px;
-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-backdrop-filter: blur(5px);
--webkit-backdrop-filter: blur(5px);
-/* border: 1px solid rgba(255, 255, 255, 0.3); */
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 5px;
   min-width: 350px;
   min-height: 450px;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+.Name_card{
+  margin-top: 1rem;
+  min-width: 300px;
+  min-height: 35px;
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  display: flex;
+  align-items: center;
+}
+.Name_card p{
+  margin-left: 0.70rem;
+  font-size: 19px;
 }
 .card-image{
 text-align: center;
 margin-top: 1rem;
 }
-.Name_level{
+.Level_card{
+ margin: 0.50rem;
+ display: flex;
+ justify-content: flex-end;
+ gap: 0.20rem;
+}
+.Card_estrela{
+  width: 18px;
+}
+.Circle{
+  border-radius: 50%;
+  width:22px;
+  height: 22px;
   display: flex;
   justify-content: center;
-  gap: 1rem;
-  line-height: 2rem;
-  text-transform: uppercase;
-  margin-top: 0.75rem;
+  align-items: center;
+  background-color: #F2EDED;
+  box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.1);
 }
-/* alterado css botão transição */
-

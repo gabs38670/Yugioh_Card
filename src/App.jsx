@@ -4,6 +4,7 @@ import Yugioh from './Yu-Gi-OhLogo.webp'
 import Mago_negro from './magiciandark.jpg'
 import Maga from './magiciangrill.jpg'
 import Bskull from './b.skull.jpg'
+import Estrela from './icons8-estrela-48.png'
 
 
 
@@ -22,22 +23,31 @@ function Card({Image,Name,Level,Type,Card,Atk,Def}){
 return(
 <>
 <div className="cards">
+<div className='Name_card'>
+<p>{Name}</p>
+</div>
+<div className="Level_card">
+<>
+{[...Array(Level)].map((_, index) => (
+        <div className='Circle'>
+          <img 
+            key={index} 
+            src={Estrela} 
+            className='Card_estrela' 
+            alt="estrela" 
+          />
+          </div>
+        ))}
+</>
+</div>
 {/* Aqui usamos a prop Image no src da tag img */}
 <div className="card-image">
   <img src={Image} alt={Name} style={{ width: '280px', height:'280px', borderRadius:"5px" }} />
 </div>
-<div className="Name_level">
-<p>{Name}</p>
-<p>{Level}</p>
-</div>
-<div className="Name_level">
-  <p>{Card}</p>
+<p>{Card}</p>
 <p>{Type}</p>
-</div>
-<div className="Name_level">
 <p>{Atk}</p>
 <p>{Def}</p>
-</div>
 </div>
 </>
 )
@@ -51,8 +61,8 @@ function App() {
     {
       id: 1,
      Image: Bskull,
-     Name: 'Nome: B. Skull Dragon',
-     Level: 'Nível: 9',
+     Name: 'B. Skull Dragon',
+     Level: 9,
      Type: 'Dragon',
      Card: 'Tipo: Fusion Monster',
      Atk: 'Atk: 3200',
@@ -61,7 +71,7 @@ function App() {
       {
       id: 2,
      Image: Mago_negro,   
-     Name: 'Nome: Dark Magician Girl',
+     Name: 'Dark Magician Girl',
      Level: 'Nível: 7',
       Type: 'Spellcaster',
      Card: 'Tipo: Effect Monster',
@@ -71,7 +81,7 @@ function App() {
       {
       id: 3,
      Image: Maga,
-     Name: 'Nome: Dark Magician',
+     Name: 'Dark Magician',
      Level: 'Nível: 7',
       Type: 'Spellcaster',
      Card: 'tipo: normal Monster',
