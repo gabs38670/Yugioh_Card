@@ -19,7 +19,7 @@ function Header(){
     </>
   )
 }
-function Card({Image,Name,Level,Type,Card,Atk,Def}){
+function Card({Image,Name,Level,Mesage,Type,Atk,Def}){
 return(
 <>
 <div className="cards">
@@ -44,10 +44,15 @@ return(
 <div className="card-image">
   <img src={Image} alt={Name} style={{ width: '280px', height:'280px', borderRadius:"5px" }} />
 </div>
-<p>{Card}</p>
-<p>{Type}</p>
-<p>{Atk}</p>
-<p>{Def}</p>
+<div className='Attributes'>
+  <p>{Type}</p>
+  <p>{Mesage}</p>
+  <div>
+    <span></span>
+    <p>{Atk}</p>
+    <p>{Def}</p>
+  </div>
+</div>
 </div>
 </>
 )
@@ -59,34 +64,32 @@ return(
 function App() {
   const [posts, setPosts ] = useState([
     {
-      id: 1,
+    id: 1,
      Image: Bskull,
      Name: 'B. Skull Dragon',
      Level: 9,
-     Type: 'Dragon',
-     Card: 'Tipo: Fusion Monster',
+     Type: '[Dragon]',
+     Mesage: '"Caveira Invocada". "Dragão negro de olhos vermelhos"',
      Atk: 'Atk: 3200',
      Def: 'Def: 2500'
     },
       {
-      id: 2,
+    id: 2,
      Image: Mago_negro,   
      Name: 'Dark Magician Girl',
-     Level: 'Nível: 7',
-      Type: 'Spellcaster',
-     Card: 'Tipo: Effect Monster',
+     Level: 7,
+      Type: '[Spellcaster]',
      Atk: 'Atk: 2000',
      Def: 'Def: 1700'
     },
       {
       id: 3,
-     Image: Maga,
-     Name: 'Dark Magician',
-     Level: 'Nível: 7',
-      Type: 'Spellcaster',
-     Card: 'tipo: normal Monster',
-     Atk: 'Atk: 2500',
-     Def: 'Def: 2100'
+      Image: Maga,
+      Name: 'Dark Magician',
+      Level: 7,
+      Type: '[Spellcaster]',
+      Atk: 'Atk: 2500',
+      Def: 'Def: 2100'
     }
   ])
  
@@ -103,6 +106,7 @@ function App() {
             Name= {item.Name}
             Level = {item.Level}
             Type = {item.Type}
+            Mesage={item.Mesage}
             Card = {item.Card}
             Atk = {item.Atk}
             Def = {item.Def}
