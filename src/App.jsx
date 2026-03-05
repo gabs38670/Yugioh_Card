@@ -8,115 +8,119 @@ import Estrela from './icons8-estrela-48.png'
 
 
 
-function Header(){
-  return(
+function Header() {
+  return (
     <>
-    <header>
-      <img className='Yugioh_effect' src={Yugioh} alt="Yu-Gi-Oh Logo" />
-      <p style={{textAlign:"center", fontSize:"50px", marginBottom:"", fontWeight:"500",fontFamily:"Germania One, system-ui", marginTop:"1rem", color:"#ffff", letterSpacing:"0.50rem"}}>É hora do duelo!</p>
-      <button className='Btn_cards'><a href="#">Iniciar</a></button>
-    </header>
+      <header>
+        <img className='Yugioh_effect' src={Yugioh} alt="Yu-Gi-Oh Logo" />
+        <p style={{ textAlign: "center", fontSize: "50px", marginBottom: "", fontWeight: "500", fontFamily: "Germania One, system-ui", marginTop: "1rem", color: "#ffff", letterSpacing: "0.50rem" }}>É hora do duelo!</p>
+        <button className='Btn_cards'><a href="#">Iniciar</a></button>
+      </header>
     </>
   )
 }
-function Card({Image,Name,Level,Mesage,Type,Atk,Def}){
-return(
-<>
-<div className="cards">
-<div className='Name_card'>
-<p>{Name}</p>
-</div>
-<div className="Level_card">
-<>
-{[...Array(Level)].map((_, index) => (
-        <div className='Circle'>
-          <img 
-            key={index} 
-            src={Estrela} 
-            className='Card_estrela' 
-            alt="estrela" 
-          />
+function Card({ Image, Name, Level, Mesage, Type, Atk, Def }) {
+  return (
+    <>
+      <div className="cards">
+        <div className='Name_card'>
+          <p>{Name}</p>
+        </div>
+        <div className="Level_card">
+          <>
+            {[...Array(Level)].map((_, index) => (
+              <div className='Circle'>
+                <img
+                  key={index}
+                  src={Estrela}
+                  className='Card_estrela'
+                  alt="estrela"
+                />
+              </div>
+            ))}
+          </>
+        </div>
+        {/* Aqui usamos a prop Image no src da tag img */}
+        <div className="card-image">
+          <img src={Image} alt={Name} style={{ width: '280px', height: '280px', borderRadius: "5px" }} />
+        </div>
+        <div className='Attributes'>
+          <p>{Type}</p>
+          <p>{Mesage}</p>
+          <div>
+            <span></span>
+            <div className="Power">
+              <p>{Atk}</p>
+              <p>{Def}</p>
+            </div>
           </div>
-        ))}
-</>
-</div>
-{/* Aqui usamos a prop Image no src da tag img */}
-<div className="card-image">
-  <img src={Image} alt={Name} style={{ width: '280px', height:'280px', borderRadius:"5px" }} />
-</div>
-<div className='Attributes'>
-  <p>{Type}</p>
-  <p>{Mesage}</p>
-  <div>
-    <span></span>
-    <p>{Atk}</p>
-    <p>{Def}</p>
-  </div>
-</div>
-</div>
-</>
-)
+        </div>
+      </div> 
+    </>
+  )
 
 
 }
 
 
 function App() {
-  const [posts, setPosts ] = useState([
+  const [posts, setPosts] = useState([
     {
-    id: 1,
-     Image: Bskull,
-     Name: 'B. Skull Dragon',
-     Level: 9,
-     Type: '[Dragon]',
-     Mesage: '"Caveira Invocada". "Dragão negro de olhos vermelhos"',
-     Atk: 'Atk: 3200',
-     Def: 'Def: 2500'
+      id: 1,
+      Image: Bskull,
+      Name: 'B. Skull Dragon',
+      Level: 9,
+      Type: '[Dragon]',
+      Mesage: '"Caveira Invocada". "Dragão negro de olhos vermelhos".',
+      Atk: 'ATK/3200',
+      Def: 'DEF/2500'
     },
-      {
-    id: 2,
-     Image: Mago_negro,   
-     Name: 'Dark Magician Girl',
-     Level: 7,
-      Type: '[Spellcaster]',
-     Atk: 'Atk: 2000',
-     Def: 'Def: 1700'
-    },
-      {
-      id: 3,
-      Image: Maga,
+    {
+      id: 2,
+      Image: Mago_negro,
       Name: 'Dark Magician',
       Level: 7,
       Type: '[Spellcaster]',
-      Atk: 'Atk: 2500',
-      Def: 'Def: 2100'
+      Mesage: 'O mago definitivo em termos de ataque e defasa.',
+      Atk: 'ATK/2500',
+      Def: 'DEF/2100'
+    },
+    {
+      id: 3,
+      Image: Maga,
+      Name: 'Dark Magician Girl',
+      Level: 7,
+      Type: '[Spellcaster]',
+      Mesage: 'Ganha 300 de ATK para cada Mago Negro ou Mago do Caos das Trevas no Cemitério ',
+      Atk: 'ATK/2000 ',
+      Def: 'DEF/1700'
     }
   ])
- 
+
   return (
     <>
-      <Header/>
+      <Header />
       <main>
-        <h1 style={{textAlign:"center"}}>Testando</h1>
-      <div className="Mycards">
-        {posts.map((item) => (
+        <h1 style={{ textAlign: "center" }}>Testando</h1>
+        <div className="Mycards">
+          {posts.map((item) => (
             <Card
-            key={item.id}
-            Image={item.Image}
-            Name= {item.Name}
-            Level = {item.Level}
-            Type = {item.Type}
-            Mesage={item.Mesage}
-            Card = {item.Card}
-            Atk = {item.Atk}
-            Def = {item.Def}
-           
+              key={item.id}
+              Image={item.Image}
+              Name={item.Name}
+              Level={item.Level}
+              Type={item.Type}
+              Mesage={item.Mesage}
+              Card={item.Card}
+              Atk={item.Atk}
+              Def={item.Def}
+
             />
           ))}
-      </div>
+        </div>
       </main>
     </>
-    
+
   )
 }
 
