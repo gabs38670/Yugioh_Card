@@ -5,7 +5,7 @@ import Mago_negro from './magiciandark.jpg'
 import Maga from './magiciangrill.jpg'
 import Bskull from './b.skull.jpg'
 import Estrela from './icons8-estrela-48.png'
-
+import Solomon from './SolomonMutoMD.webp'
 
 
 function Header() {
@@ -18,6 +18,29 @@ function Header() {
       </header>
     </>
   )
+}
+function Character(){
+ 
+  const [isVisible, setIsVisible] = useState(false);
+
+  const toggleVisibility = () => {
+    setIsVisible(!isVisible);
+  };
+
+ return(
+    <>
+      <section className='Character_1'>
+        <img src={Solomon} alt="Personagem Solomon Muto" />
+        <div className="Phrase">
+        <button className='Btn_cards' onClick={toggleVisibility}>
+          {isVisible ? 'Solomon Muto' : 'Solomon Muto'}
+        </button>
+        {isVisible && <p className='teste'>Não importa quão poderosa seja a sua mão, a vitória sempre dependerá da fé que você tem no seu deck e no coração das cartas.</p>}
+        </div>
+      </section>
+    </>
+  )
+
 }
 function Card({ Image, Name, Level, Mesage, Type, Atk, Def }) {
   return (
@@ -40,7 +63,7 @@ function Card({ Image, Name, Level, Mesage, Type, Atk, Def }) {
             ))}
           </>
         </div>
-        {/* Aqui usamos a prop Image no src da tag img */}
+
         <div className="card-image">
           <img src={Image} alt={Name} style={{ width: '280px', height: '280px', borderRadius: "5px" }} />
         </div>
@@ -100,6 +123,7 @@ function App() {
   return (
     <>
       <Header />
+      <Character/>
       <main>
         <h1 style={{ textAlign: "center" }}>Testando</h1>
         <div className="Mycards">

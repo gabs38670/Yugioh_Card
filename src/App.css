@@ -48,7 +48,29 @@ header{
   letter-spacing: 0.40rem;
   text-transform: uppercase;
 }
-
+.Character_1{
+  /* background-image: radial-gradient(circle, #2c3e50, #24303d, #1c252e, #141a20, #0c1013); */
+  background-image: radial-gradient(circle, #4a4440, #3d3733, #302b28, #23201d, #141211);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.Phrase{
+  min-width: 300px;
+  min-height: 350px;
+}
+.Phrase button{
+  cursor: pointer;
+  color: #ffff;
+  letter-spacing: 0.20rem;
+}
+.teste{
+  /* background-color: #c777b9; */
+  max-width:  280px;
+  margin-top: 1rem;
+  font-size: 17px;
+  color: #ffff;
+}
 .Mycards{
   display: flex;
   justify-content: center;
