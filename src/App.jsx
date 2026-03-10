@@ -6,6 +6,7 @@ import Maga from './magiciangrill.jpg'
 import Bskull from './b.skull.jpg'
 import Estrela from './icons8-estrela-48.png'
 import Solomon from './SolomonMutoMD.webp'
+import Joey from './joey-l.png'
 
 
 function Header() {
@@ -13,7 +14,7 @@ function Header() {
     <>
       <header>
         <img className='Yugioh_effect' src={Yugioh} alt="Yu-Gi-Oh Logo" />
-        <p style={{ textAlign: "center", fontSize: "50px", marginBottom: "", fontWeight: "500", fontFamily: "Germania One, system-ui", marginTop: "1rem", color: "#ffff", letterSpacing: "0.50rem" }}>É hora do duelo!</p>
+        <p style={{ textAlign: "center", fontSize: "50px", fontWeight: "500", fontFamily: "Germania One, system-ui", marginTop: "1rem", color: "#ffff", letterSpacing: "0.50rem" }}>É hora do duelo!</p>
         <button className='Btn_cards'><a href="#">Iniciar</a></button>
       </header>
     </>
@@ -35,7 +36,30 @@ function Character(){
         <button className='Btn_cards' onClick={toggleVisibility}>
           {isVisible ? 'Solomon Muto' : 'Solomon Muto'}
         </button>
-        {isVisible && <p className='teste'>Não importa quão poderosa seja a sua mão, a vitória sempre dependerá da fé que você tem no seu deck e no coração das cartas.</p>}
+        {isVisible && <p className='phrase'>Não importa quão poderosa seja a sua mão, a vitória sempre dependerá da fé que você tem no seu deck e no coração das cartas.</p>}
+        </div>
+      </section>
+    </>
+  )
+
+}
+function Character_2(){
+ 
+  const [isVisible, setIsVisible] = useState(false);
+
+  const toggleVisibility = () => {
+    setIsVisible(!isVisible);
+  };
+
+ return(
+    <>
+      <section className='Character_2'>
+        <img src={Joey} alt="Personagem Joey Wheeler" />
+        <div className="Phrase">
+        <button className='Btn_cards' onClick={toggleVisibility}>
+          {isVisible ? 'Joey Wheeler' : 'Joey Wheeler'}
+        </button>
+        {isVisible && <p className='phrase'>Mesmo que as probabilidades estejam contra mim, eu nunca vou desistir.<br/> Essa é a minha forma de duelar!</p>}
         </div>
       </section>
     </>
@@ -84,6 +108,13 @@ function Card({ Image, Name, Level, Mesage, Type, Atk, Def }) {
 
 
 }
+function footer() {
+  <>
+    <footer>
+      <span></span>
+    </footer>
+  </>
+}
 
 
 function App() {
@@ -123,9 +154,12 @@ function App() {
   return (
     <>
       <Header />
-      <Character/>
-      <main>
-        <h1 style={{ textAlign: "center" }}>Testando</h1>
+      <section className='bottom'>
+        <Character/>
+        <Character_2/>
+      </section>
+       <section className='cards_monster'>
+         <h1 style={{ textAlign: "center", fontSize: "50px", fontWeight: "500", fontFamily: "Germania One, system-ui", color: "#ffff", letterSpacing: "0.50rem", paddingTop:"1rem"} } >Eu acredito no coração das cartas</h1>
         <div className="Mycards">
           {posts.map((item) => (
             <Card
@@ -142,7 +176,7 @@ function App() {
             />
           ))}
         </div>
-      </main>
+       </section>
     </>
 
   )

@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Germania+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pirata+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Metamorphous&display=swap');
 *{
   margin: 0;
   padding: 0;
@@ -48,9 +50,10 @@ header{
   letter-spacing: 0.40rem;
   text-transform: uppercase;
 }
-.Character_1{
-  /* background-image: radial-gradient(circle, #2c3e50, #24303d, #1c252e, #141a20, #0c1013); */
+.bottom{
   background-image: radial-gradient(circle, #4a4440, #3d3733, #302b28, #23201d, #141211);
+}
+.Character_1{
   display: flex;
   justify-content: center;
   align-items: center;
@@ -64,12 +67,25 @@ header{
   color: #ffff;
   letter-spacing: 0.20rem;
 }
-.teste{
-  /* background-color: #c777b9; */
+.phrase{
   max-width:  280px;
   margin-top: 1rem;
-  font-size: 17px;
+  font-size: 19px;
+  font-family: "Oswald", sans-serif;
   color: #ffff;
+}
+.Character_2{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row-reverse;
+}
+.Character_2 img{
+  width: 543px;
+  height: 668px;
+}
+.cards_monster{
+   background-image: radial-gradient(circle, #4a4440, #3d3733, #302b28, #23201d, #141211);
 }
 .Mycards{
   display: flex;
@@ -78,6 +94,7 @@ header{
   gap: 2.50rem;
   margin-top: 1rem;
 }
+
 .cards{
   background: rgba(255, 255, 255, 0.2);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -86,6 +103,7 @@ header{
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 5px;
   min-width: 350px;
+  min-height: 500px;
   display: grid;
   justify-content: center;
   align-items: center;
@@ -95,7 +113,7 @@ header{
   min-width: 300px;
   min-height: 35px;
   border-radius: 5px;
-  background: rgba(255, 255, 255, 0.2);
+  background: transparent;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
@@ -105,16 +123,19 @@ header{
 }
 .Name_card p{
   margin-left: 0.70rem;
-  font-size: 19px;
+  font-size: 21px;
+  font-family: "Pirata One", system-ui;
+  font-weight: 300;
+  color: #D4D4D4;
 }
 .card-image{
-text-align: center;
-margin-top: 1rem;
+  text-align: center;
 }
 .Level_card{
  margin: 0.50rem;
  display: flex;
  justify-content: flex-end;
+ 
  gap: 0.20rem;
 }
 .Card_estrela{
@@ -127,28 +148,33 @@ margin-top: 1rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #F2EDED;
-  box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.1);
+  background-color: transparent;
+  box-shadow: 0px 10px 15px -3px rgba(138, 138, 138, 0.842);
 }
 .Attributes{
   max-width: 300px;
+  min-height: 90px;
   border-radius: 5px;
-  background: rgba(255, 255, 255, 0.2);
+  background: transparent;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
   border: 1px solid rgba(255, 255, 255, 0.3);
-  margin-top: 1rem;
+  margin-top: 0.80rem;
+  margin-bottom: 0.80rem;
 }
 .Attributes p{
   margin-top: 0.40rem;
   margin-left: 0.50rem;
+  color: #ffff;
+  font-family: "Metamorphous", serif;
+  font-size: 11px;
 }
 .Attributes span{
   display: block;
   width:285px;
   height: 1px;
-  background-color: #333;
+  background-color: #fff;
   margin-top: 0.40rem;
   margin-left: auto;
   margin-right: auto;
