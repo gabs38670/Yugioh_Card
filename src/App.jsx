@@ -15,7 +15,7 @@ function Header() {
       <header>
         <img className='Yugioh_effect' src={Yugioh} alt="Yu-Gi-Oh Logo" />
         <p style={{ textAlign: "center", fontSize: "50px", fontWeight: "500", fontFamily: "Germania One, system-ui", marginTop: "1rem", color: "#ffff", letterSpacing: "0.50rem" }}>É hora do duelo!</p>
-        <button className='Btn_cards'><a href="#">Iniciar</a></button>
+        <button className='Btn_cards'><a href="#character">Iniciar</a></button>
       </header>
     </>
   )
@@ -30,7 +30,7 @@ function Character(){
 
  return(
     <>
-      <section className='Character_1'>
+      <section id='character' className='Character_1'>
         <img src={Solomon} alt="Personagem Solomon Muto" />
         <div className="Phrase">
         <button className='Btn_cards' onClick={toggleVisibility}>
@@ -108,13 +108,16 @@ function Card({ Image, Name, Level, Mesage, Type, Atk, Def }) {
 
 
 }
-function footer() {
+function Footer() {
+  return(
   <>
     <footer>
-      <span></span>
+      <p>&copy; 2026 Cards Yugioh - Desenvolvedor Pers@na</p>
     </footer>
   </>
+  )
 }
+
 
 
 function App() {
@@ -159,7 +162,7 @@ function App() {
         <Character_2/>
       </section>
        <section className='cards_monster'>
-         <h1 style={{ textAlign: "center", fontSize: "50px", fontWeight: "500", fontFamily: "Germania One, system-ui", color: "#ffff", letterSpacing: "0.50rem", paddingTop:"1rem"} } >Eu acredito no coração das cartas</h1>
+         <h1 style={{ textAlign: "center", fontSize: "35px", fontWeight: "500", fontFamily: "Germania One, system-ui", color: "#ffff", letterSpacing: "0.50rem", paddingTop:"1rem"} } >Eu acredito no coração das cartas</h1>
         <div className="Mycards">
           {posts.map((item) => (
             <Card
@@ -176,6 +179,7 @@ function App() {
             />
           ))}
         </div>
+        <Footer/>
        </section>
     </>
 

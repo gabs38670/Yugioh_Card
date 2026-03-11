@@ -5,6 +5,7 @@
 *{
   margin: 0;
   padding: 0;
+  scroll-behavior: smooth;
 }
 header{
   min-height: 100vh;
@@ -184,4 +185,10 @@ header{
   justify-content: flex-end;
   margin-top: 0.30rem;
   margin-right: 1rem;
+}
+footer{
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9rem;
+    color: #ffff;
 }
